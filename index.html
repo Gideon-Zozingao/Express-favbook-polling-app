@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Express Fav Book Poling Application</title>
+    <link rel="shortcut icon" href="public/images/page-icon.png">
+    <link rel="stylesheet" type="text/css" href="public/styles/app-styles.css">
+</head>
+<body>
+
+	<header class="app-header">
+		<h1 class="header-text-1">
+			Node & Express JS Favourite Book Poll Application.
+		</h1>	
+		<h2 class="header-text-2">
+			We are collecting Information on your Favourite Books
+		</h2>
+	</header>
+	<div class="container">
+		<h3 class="header-text-2">We are Conducting Survey for the 10 of the Best Fiction Books fo 2019</h3>
+		<div class="polingArea">
+
+			<div class="section section-2">
+				<fieldset class="scorViewer">
+					<legend>Select your Favurite Book and View How many People like it</legend>
+					<select class="form-control" id="bookVScoreTaker">
+						<option value="">Select Your Favourite Book </option>
+						<option value=" The End of Loneliness"> The End of Loneliness</option>
+						<option value="Looker">Looker</option>
+						<option value="The Care and Feeling of Ravenously Hungry Girl">The Care and Feeling of Ravenously Hungry Girl</option>
+						<option value="Black Leopard,Red wolf">Black Leopard,Red wolf</option>
+						<option value="Gingerbread">Gingerbread</option>
+						<option value="Stay Up With Hug Best">Stay Up With Hug Best</option>
+						<option value="Stay Up With Hug Best">Stay Up With Hug Best</option>
+						<option value="Normal People">Normal People</option>
+						<option value="The Parisian">The Parisian</option>
+						<option value="Lost and Wanted">Lost and Wanted</option>
+					</select>
+					<div class="scoreBoard">
+						
+					</div>
+				</fieldset>
+			</div>
+			<div class="section section-1">
+				<form class="poling-form" action="/polling" method="GET" id="poling-form" class="poling-form">
+				<div class="messages">
+					
+				</div>
+				<fieldset>
+					<legend>Write your name and Select a Favourite Book</legend>
+					<input type="text" name="Username" placeholder="Type your name here" class="form-control" id="name" autosave="false">
+					<select class="form-control" name="favBook" id="favBook">
+						<option>Top 10 Fiction Books of 2019</option>
+						<option value="The End of Loneliness">The End of Loneliness</option>
+						<option value="Looker">Looker</option>
+						<option value="The Care and Feeling of Ravenously Hungry Girl">The Care and Feeling of Ravenously Hungry Girl</option>
+						<option value="Balck Leopard,Red wolf">Balck Leopard,Red wolf</option>
+						<option value="Gingerbread">Gingerbread</option>
+						<option value="Stay Up With Hug Best">Stay Up With Hug Best</option>
+						<option value="Normal People">Normal People</option>
+						<option value="The Parisian">The Parisian</option>
+						<option value="Loste and Wanted<">Loste and Wanted</option>
+				</select>
+				<button type="submit" class="subBtn">Submit</button>
+				</fieldset>
+				
+					
+				
+				
+			</form>
+			</div>
+			
+		</div>
+	</div>
+<footer class="footer app-footer">
+	<h1 class="footer-title">
+		Footer
+	</h1>
+	<h1 class="footer-sub-title">
+		Footer
+	</h1>
+	<div class="copy-right">
+		<p class="copy-right-text">Pacifica Prime <sup>&copy;</sup> 2021</p>
+		<p class="developer-info">Developed by <em>Gideon Zozingao</em>
+			<br>email: gideonzozinghao@switchmaven.com<br>Phone: +675 74865430
+		</p>
+	</div>
+</footer>
+<script type="text/javascript" src="public/js/app.js"></script>
+</body>
+</html>
