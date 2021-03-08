@@ -6,7 +6,7 @@ const app=express();
 const port=4001;
 
 let pollData=[];
-//parsing and using the static server files
+
 app.use('/public', express.static(path.join(__dirname, 'public')))
 
 app.get('/',(req,res)=>{
@@ -31,31 +31,27 @@ app.get('/polling',(req,res)=>{
 })
 app.get('/view-book-score',(req,res)=>{
 	let reqBook=req.query.book;
-	let bookCount=0;
-	let favNames=[];
+	
+	let favbook=[];
+	
 	if(pollData.length>0){
-		let entries=`<ul>
-					${pollData.map(data=>
-						
-							`<li>${data.name}-> <b>${data.favBook}</b> </li>`
-						
-						)}	
-			        </ul>`;
+		for( let i=0;i<pollData.length; i++){
+			let b=pollData[i].favBook;
+			if(reqBook===b){
+				favbook.push(b);
+			}
+		}
 		
-		res.send(entries);
-		
-		
+		console.log(`Request  for polling data at ${new Date()}`);
+		res.send(`<b>${favbook.length}</b> liked ${reqBook}`)
 	}else{
 		res.send("<h6>No Polls Entry at the Moment</h6>");
 
 	}
 	
-	console.log(`Poll request for ${reqBook} at ${new Date()}`);
-	
 })
 
 
-//Create the instance of the Server and run it on PORT 4001
 app.listen(port,()=>{
 	console.log(`Your Application server has statted and  Runing at localhost:${port}`)
 });
